@@ -3,7 +3,6 @@ const { JWT_SECRET } = require("../../config");
 
 module.exports = (req, res, next) => {
   const token = req.headers.authorization;
-  console.log(token);
   if (!token) {
     res.status(500).json({
       message: "token required",
